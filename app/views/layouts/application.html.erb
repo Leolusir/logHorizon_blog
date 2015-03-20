@@ -8,8 +8,55 @@
 </head>
 <body>
   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> 
-<%= yield %>
+  <p class="alert"><%= alert %></p>
+
+  <div class="ui grid" style="width: 1024px;margin: 0 auto;">
+    <div class="one column row">
+      <div class="column">
+        <h1>logHorizon</h1>
+        <p>wall2flowerのblog</p>
+        <div class="ui tabular menu">
+          <a class="active item">
+            Index
+          </a>
+          <a class="item">
+            Tags
+          </a>
+          <a class="item">
+            Archive
+          </a>
+          <a class="item">
+            About me
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="eleven wide column">
+        <div class="ui attached segment">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="five wide column">
+        <div class="ui top attached header">
+          About me
+        </div>
+        <div class="ui attached segment">
+          <p>xxx</p>
+        </div>
+        <div class="ui top attached header">
+          Tags
+        </div>
+        <div class="ui attached segment">
+          <p>xxx</p>
+        </div>
+        <div class="ui top attached header">
+          Archive
+        </div>
+        <div class="ui attached segment">
+        </div>
+      </div>
+  </div>
 
 </body>
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
