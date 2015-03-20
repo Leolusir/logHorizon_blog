@@ -4,7 +4,8 @@
   <% @articles.each do |article| %>
     <li>
       <span><%= article.title %></span> ||
-      <span><%= article.content %></span>
+      <span><%= article.content %></span> ||
+      <%= link_to 'read more', article_path(article) %>
     </li>
   <% end %>
 </ul>
