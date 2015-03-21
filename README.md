@@ -4,6 +4,6 @@
 
 TODO:
 - [x] post/edit/delete blogs
-- [ ] post blog with tags
+- [x] post blog with tags
 - [ ] markdown syntax
 
