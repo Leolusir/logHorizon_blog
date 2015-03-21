@@ -4,11 +4,20 @@
     <%= f.text_field :title %>
   </p>
   <p>
+    <%= label_tag 'tags' %><br>
+    <%= text_field_tag 'tags' %>
+  </p>
+  <p>
     <%= f.label :content %><br>
-    <%= f.text_field :content %>
+    <%= f.text_area :content %>
   </p>
   <p>
     <%= f.submit %>
   </p>
+
+  <hr>
+  <% Tag.find_each do |tag| %>
+    <div class="ui tag label"><%= tag.name %></div>
+  <% end %>
 
 <% end %>

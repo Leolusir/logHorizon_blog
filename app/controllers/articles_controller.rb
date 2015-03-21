@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @tags = Tag.all
   end
 
   def create
@@ -44,6 +45,22 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :content)
+      split_tags
+      params.require(:article).permit(:title, :content, tag_ids: [])
+    end
+    def split_tags
+      tag_ids = []
+      tags = params[:tags].split(";")
+      for tag in tags
+        tagObject = Tag.find_by(name: tag)
+        if tagObject
+          tag_ids.push(tagObject.id)
+        else
+          newTag = Tag.create(name: tag)
+          tag_ids.push(newTag.id)
+        end
+      end
+      params[:article][:tag_ids] = tag_ids
+      return
     end
 end
