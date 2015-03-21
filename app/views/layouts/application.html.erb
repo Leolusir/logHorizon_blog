@@ -46,7 +46,11 @@
           Tags
         </div>
         <div class="ui attached segment">
-          <p>xxx</p>
+          <p>
+            <% Tag.find_each do |tag| %>
+              <div class="ui tag label"><%= tag.name %></div>
+            <% end %>
+          </p>
         </div>
         <div class="ui top attached header">
           Archive

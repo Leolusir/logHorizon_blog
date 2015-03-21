@@ -9,6 +9,11 @@
     <p class="content">
       <%= article.content %>
     </p>
+    <p>
+      <% article.tags.each do |tag| %>
+        <div class="ui tag label"><%= tag.name %></div>
+      <% end %>
+    </p>
   <% end %>
 </div>
 <div class="ui bottom attached header">
