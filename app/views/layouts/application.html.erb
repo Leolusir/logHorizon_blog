@@ -16,16 +16,16 @@
         <h1>logHorizon</h1>
         <p>wall2flowerのblog</p>
         <div class="ui tabular menu">
-          <a class="active item">
+          <a href="<%= root_path %>" class="item <%= 'active' if params[:controller] == 'welcome' and params[:action] == 'index' %>">
             Index
           </a>
-          <a class="item">
+          <a class="item <%= 'active' if params[:controller] == 'tags' %>">
             Tags
           </a>
-          <a class="item">
+          <a class="item <%= 'active' if params[:controller] == 'archives' %>">
             Archive
           </a>
-          <a class="item">
+          <a href="<%= about_path %>" class="item <%= 'active' if params[:action] == 'about' %>">
             About me
           </a>
         </div>
