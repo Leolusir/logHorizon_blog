@@ -48,7 +48,7 @@
         <div class="ui attached segment">
           <p>
             <% Tag.find_each do |tag| %>
-              <div class="ui tag label"><%= tag.name %></div>
+              <a href="<%= tag_path(tag) %>" class="ui tag label"><%= tag.name %></a>
             <% end %>
           </p>
         </div>
