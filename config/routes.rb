@@ -1,6 +1,4 @@
 LogHorizonBlog::Application.routes.draw do
-  get "tags/index"
-  get "tags/show"
   devise_for :users
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -11,7 +9,7 @@ LogHorizonBlog::Application.routes.draw do
   get '/about', to: 'welcome#about'
 
   resources :articles
-
+  resources :tags
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
