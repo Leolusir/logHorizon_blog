@@ -1,2 +1,13 @@
-<h1>Tags#show</h1>
-<p>Find me in app/views/tags/show.html.erb</p>
+<div class="ui attached segment">
+  <h4><%= @tag.name %></h4>
+  <ul>
+    <% @tag.articles.each do |article| %>
+      <li>
+        <p>
+          <%= link_to article.title, article_path(article) %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</div>
+

@@ -19,7 +19,7 @@
           <a href="<%= root_path %>" class="item <%= 'active' if params[:controller] == 'welcome' and params[:action] == 'index' %>">
             Index
           </a>
-          <a class="item <%= 'active' if params[:controller] == 'tags' %>">
+          <a href="<%= tags_path %>" class="item <%= 'active' if params[:controller] == 'tags' %>">
             Tags
           </a>
           <a class="item <%= 'active' if params[:controller] == 'archives' %>">
