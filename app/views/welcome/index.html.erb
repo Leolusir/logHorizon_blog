@@ -1,12 +1,14 @@
-<% @articles.each do |article| %>
-  <h2 class="ui header">
-    <%= link_to article.title, article_path(article) %>
-    <div class="sub header">
-      <%= article.created_at %>
-    </div>
-  </h2>
-  <p class="content">
-    <%= article.content %>
-  </p>
-  <hr>
-<% end %>
+<div class="ui attached segment">
+  <% @articles.each do |article| %>
+    <h2 class="ui header">
+      <%= link_to article.title, article_path(article) %>
+      <div class="sub header">
+        <%= article.created_at %>
+      </div>
+    </h2>
+    <p class="content">
+      <%= article.content %>
+    </p>
+    <hr>
+  <% end %>
+</div>

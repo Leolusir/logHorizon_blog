@@ -1,19 +1,21 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
+<div class="ui attached segment">
+  <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+  </p>
+  <p>
+    <strong>Content:</strong>
+    <%= @article.content %>
+  </p>
 
-<%= link_to 'Back', articles_path %>
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Destroy', article_path(@article), 
-                       method: :delete, 
-                       data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Back', articles_path %>
+  <%= link_to 'Edit', edit_article_path(@article) %>
+  <%= link_to 'Destroy', article_path(@article), 
+                         method: :delete, 
+                         data: { confirm: 'Are you sure?' } %>
 
-<br>
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="<%= @article.id %>" data-title="<%= @article.title %>" data-url="请替换成文章的网址"></div>
-<!-- 多说评论框 end -->
+  <br>
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="<%= @article.id %>" data-title="<%= @article.title %>" data-url="请替换成文章的网址"></div>
+  <!-- 多说评论框 end -->
+</div>
