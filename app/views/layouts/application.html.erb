@@ -36,11 +36,24 @@
         <%= yield %>
       </div>
       <div class="five wide column">
-        <div class="ui top attached header">
-          About me
-        </div>
-        <div class="ui attached segment">
-          <p>xxx</p>
+        <div class="ui card">
+          <div class="image dimmable">
+            <div class="ui dimmer transition hidden" style="display:none;">
+              <div class="content">
+                <div class="ui inverted button">Button</div>
+              </div>
+            </div>
+            <%= image_tag "icon.JPG"%>
+          </div>
+          <div class="content">
+            <div class="header">Wall2flower</div>
+            <div class="meta"><a class="group">links</a></div>
+            <div class="description">here is some desc</div>
+          </div>
+          <div class="extra content">
+            <a class="right floated created">Links</a>
+            <a class="firends">Links</a>
+          </div>
         </div>
         <div class="ui top attached header">
           Tags
