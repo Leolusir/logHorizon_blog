@@ -1,0 +1,19 @@
+<% @articles_month.sort.reverse.each do |year, articless| %>
+  <ul>
+    <li><%=h year.strftime("%G")%>
+      <% articless.group_by { |a| a.created_at.beginning_of_month }.each do |month, articles| %>
+        <ul>
+          <li><%=h month.strftime("%B") %>
+            <ul>
+              <% for article in articles %>
+                <li><%= article.title %></li>
+              <% end %>
+            </ul> 
+          </ul> 
+        <% end %>
+
+    </li>
+  
+  </ul>
+
+<% end %>

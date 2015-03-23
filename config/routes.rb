@@ -7,7 +7,9 @@ LogHorizonBlog::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   get '/about', to: 'welcome#about'
-
+  get '/archives/:year_id/:month_id', to: 'archives#index'
+  get '/archives/:year_id', to: 'archives#index'
+  get '/archives', to: 'archives#index'
   resources :articles
   resources :tags
   # Example of regular route:
