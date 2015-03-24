@@ -4,7 +4,6 @@
       <li><h2><%=h year.strftime("%G")%></h2>
         <% articless.group_by { |a| a.created_at.beginning_of_month }.each do |month, articles| %>
           <ul>
-            <%= binding.pry %>
             <li><h4><%= month.strftime("%B") %></h4>
               <ul>
                 <% for article in articles %>
