@@ -43,7 +43,7 @@
           <div class="content">
             <div class="header">Wall2flower</div>
             <div class="meta"><a class="group">links</a></div>
-            <div class="description">here is some desc</div>
+            <div class="description">Null</div>
           </div>
           <div class="extra content">
             <a class="right floated created">Links</a>
@@ -67,7 +67,7 @@
           <% Article.all.group_by {|a| a.created_at.beginning_of_year}.sort.reverse.each do |year, a_year| %>
             <% a_year.group_by{|a| a.created_at.beginning_of_month}.each do |month, a_month| %>
               <p>
-                <a href="/archives/#{year}/#{month}"><%= month.strftime("%G %B") %>(<%= a_month.count %>)</a>
+                <a href="/archives/<%= year.year %>/<%= year.month %>"><%= month.strftime("%G %B") %>(<%= a_month.count %>)</a>
               </p>
             <% end %>
           <% end %>
