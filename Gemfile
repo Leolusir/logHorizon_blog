@@ -34,6 +34,10 @@ end
 
 gem 'devise'
 gem 'pry'
+group :development do
+  gem "rails-erd"
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
