@@ -10,7 +10,7 @@
   </p>
   <p>
     <strong>Content:</strong>
-    <%= @article.content %>
+    <%= markdown @article.content %>
   </p>
 
   <%= link_to 'Back', articles_path %>
