@@ -32,6 +32,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'redcarpet'
+
 gem 'devise'
 gem 'pry'
 group :development do
