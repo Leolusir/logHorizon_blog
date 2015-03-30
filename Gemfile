@@ -33,7 +33,7 @@ group :doc do
 end
 
 gem 'redcarpet'
-
+gem 'slim'
 gem 'devise'
 gem 'pry'
 group :development do
