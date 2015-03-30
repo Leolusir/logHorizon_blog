@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title wall2flower的生存报告
+    == stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    == javascript_include_tag "application", "data-turbolinks-track" => true
+    == csrf_meta_tags
+
+  body
+    p.notice = notice
+    p.alert = alert
+
+    div[class="ui grid" style="width: 1024px;margin: 0 auto;"]
+      div[class="one column row"]
+        div[class="column"]
+          h1 logHorizon
+          p wall2flower的生存报告 poi~
+          div[class="ui tabular menu"]
+            a[href="#{root_path}" class="item #{'active' if params[:controller] == 'welcome' and params[:action] == 'index'}"] Index
+            a[href="#{tags_path}" class="item #{'active' if params[:controller] == 'tags'}"] Tags
+            a[href="#{archives_path}" class="item #{'active' if params[:controller] == 'archives'}"] Archives
+            a[href="#{about_path}" class="item #{'active' if params[:controller] == 'about'}"] About
+      
+      div.row
+        div[class="eleven wide column"]
+          == yield
+        div[class="five wide column"]
+          div[class="ui card"]
+            div[class="image dimmable"]
+              == image_tag "icon.JPG"
+            div.content
+              div.description Null
+
+          div[class="ui top attached header"] Tags
+          div[class="ui attached segment"]
+            p
+              - Tag.find_each do |tag|
+                a[href="#{tag_path(tag)}" class="ui tag label"] == tag.name
+          div[class="ui top attached header"] Archive
+          div[class="ui attached segment"]
+            - Article.all.group_by { |a| a.created_at.beginning_of_year }.sort.reverse.each do |year, a_year|
+              - a_year.group_by{ |a| a.created_at.beginning_of_month }.each do |month, a_month|
+                p
+                  a[href="/archives/#{year.year}/#{year.month}"] #{month.strftime("%G %B")}("#{a_month.count}")
+
+javascript:
+  var duoshuoQuery = {short_name:"loghorizon"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+
+
