@@ -1,0 +1,16 @@
+div[class="ui attached segment"]
+  - @articles.each do |article|
+    h2[class="ui header"]
+      == link_to article.title, article_path(article)
+    div[class="sub header"]
+      == article.created_at.strftime("%Y %m月%d日, %A")
+    div.content
+      == article.content
+    p
+      - article.tags.each do |tag|
+        a[href="#{tag_path(tag)}" class="ui tag label"] == tag.name
+div[class="ui bottom attached header"]
+  div[class="ui buttons"]
+    div[class="ui button"] 1
+    div[class="ui button"] 2
+    div[class="ui button"] 3
