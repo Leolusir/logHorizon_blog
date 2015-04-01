@@ -1,0 +1,16 @@
+== form_for @article do |f|
+  p
+    == f.label :title
+    == f.text_field :title
+  p
+    == label_tag 'tags'
+    == text_field_tag 'tags'
+  p
+    == f.label :content
+    == f.text_area :content
+  p
+    == f.submit
+
+  hr
+  - Tag.find_each do |tag|
+    div[class="ui tag label"] == tag.name

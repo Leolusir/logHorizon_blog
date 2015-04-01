@@ -1,0 +1,11 @@
+div[class="ui attached segment"]
+  ul
+    - Tag.find_each do |tag|
+      li
+        h4
+          == link_to tag.name, tag_path(tag)
+        ul
+          - tag.articles.each do |article|
+            li
+              p
+                == link_to article.title, article_path(article)
