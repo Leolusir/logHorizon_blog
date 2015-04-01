@@ -1,6 +1,6 @@
 # logHorizon_blog
 
-Powered by Rail and Semantic-UI, build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by a anime [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
+Powered by Rail and Semantic-UI, build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by anime [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
 
 ###TODO:
 - [ ] archive by date
