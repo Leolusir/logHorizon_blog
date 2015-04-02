@@ -12,6 +12,14 @@ feature 'articles' do
       fill_in 'Password', :with => 'password'
     end
     click_button 'Log in'
-    expect(page).to have_content('successfully.')
+    # expect(page).to have_content('successfully.')
+    visit(new_article_path)
+    within("#new_article") do
+      fill_in 'Title', :with => 'Test Data Title'
+      fill_in 'Tags', :with => 'tags; test'
+      fill_in 'Content', :with => 'Hello, world! This line is post by Capybara.'
+    end
+    click_button 'Create Article'
+    expect(page).to have_content('successfully')
   end
 end
