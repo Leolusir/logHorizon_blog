@@ -55,6 +55,9 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  # Factory Girl
+  config.include FactoryGirl::Syntax::Methods
+
   # Capybara
   # Capybara wait time
   Capybara.default_wait_time = 5
