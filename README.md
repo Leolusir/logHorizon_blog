@@ -1,10 +1,18 @@
 # logHorizon_blog
 
-Powered by Rails and Semantic-UI, build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by anime [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
+Powered by [Rails](https://github.com/rails/rails) and [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI), build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
 
-## run test
+## Testing
 ```
-rspec
+bundle exec rspec spec
+```
+
+## Install
+```
+git clone https://github.com/wall2flower/logHorizon_blog.git
+cd logHorizon
+bundle
+rails s
 ```
 
 ###TODO:
@@ -17,6 +25,11 @@ rspec
 - [x] post blog with tags
 - [x] markdown syntax
 - [x] rewrite template with [Slim](http://slim-lang.com/)
+
+## Thanks
+[Semantic-UI](https://github.com/Semantic-Org/Semantic-UI)
+
+[typo.css](https://github.com/sofish/typo.css)
 
 # License
 The MIT License (MIT)
