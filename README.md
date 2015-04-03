@@ -2,6 +2,11 @@
 
 Powered by Rails and Semantic-UI, build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by anime [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
 
+## run test
+```
+rspec
+```
+
 ###TODO:
 - [ ] archive by date
 - [ ] React.js/RactiveJS
