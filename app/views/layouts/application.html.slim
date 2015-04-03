@@ -15,6 +15,9 @@ html
         div[class="column"]
           h1 logHorizon
           p wall2flower的生存报告 poi~
+          -if current_user
+            p 
+              == link_to 'Log out', destroy_user_session_path, method: :delete
           div[class="ui tabular menu"]
             a[href="#{root_path}" class="item #{'active' if params[:controller] == 'welcome' and params[:action] == 'index'}"] Index
             a[href="#{tags_path}" class="item #{'active' if params[:controller] == 'tags'}"] Tags
