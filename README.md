@@ -27,9 +27,8 @@ rails s
 - [x] rewrite template with [Slim](http://slim-lang.com/)
 
 ## Thanks
-[Semantic-UI](https://github.com/Semantic-Org/Semantic-UI)
-
-[typo.css](https://github.com/sofish/typo.css)
+- [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI)
+- [typo.css](https://github.com/sofish/typo.css)
 
 # License
 The MIT License (MIT)
