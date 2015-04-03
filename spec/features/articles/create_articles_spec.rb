@@ -6,13 +6,7 @@ feature 'articles' do
   end
 
   scenario '#new' do
-    visit(user_session_path)
-    within("#new_user") do
-      fill_in 'Email', :with => 'person@example.com'
-      fill_in 'Password', :with => 'password'
-    end
-    click_button 'Log in'
-    # expect(page).to have_content('successfully.')
+    sign_in 
     visit(new_article_path)
     within("#new_article") do
       fill_in 'Title', :with => 'Test Data Title'
