@@ -9,9 +9,9 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to @article
+      redirect_to @article, flash: {notice: "Post article successfully."}
     else
-      render 'new'
+      render 'new', flash: {alert: "something was wrong."}
     end
   end
 

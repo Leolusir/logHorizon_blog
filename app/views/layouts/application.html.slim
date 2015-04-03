@@ -15,6 +15,9 @@ html
         div[class="column"]
           h1 logHorizon
           p wall2flower的生存报告 poi~
+          -if current_user
+            p 
+              == link_to 'Log out', destroy_user_session_path, method: :delete
           div[class="ui tabular menu"]
             a[href="#{root_path}" class="item #{'active' if params[:controller] == 'welcome' and params[:action] == 'index'}"] Index
             a[href="#{tags_path}" class="item #{'active' if params[:controller] == 'tags'}"] Tags
@@ -22,7 +25,7 @@ html
             a[href="#{about_path}" class="item #{'active' if params[:controller] == 'about'}"] About
       
       div.row
-        div[class="eleven wide column"]
+        div[class="eleven wide column typo"]
           == yield
         div[class="five wide column"]
           div[class="ui card"]
@@ -43,14 +46,14 @@ html
                 p
                   a[href="/archives/#{year.year}/#{year.month}"] #{month.strftime("%G %B")}("#{a_month.count}")
 
-javascript:
-  var duoshuoQuery = {short_name:"loghorizon"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+  javascript:
+    var duoshuoQuery = {short_name:"loghorizon"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
 
 
