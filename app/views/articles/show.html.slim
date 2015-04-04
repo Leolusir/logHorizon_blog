@@ -1,18 +1,9 @@
-div[class="ui attached segment"]
-  p
-    strong Title:
-    == @article.title
-  p
-    - @article.tags.each do |tag|
-      a[href="#{tag_path(tag)}" class="ui tag label"] == tag.name
-  p
-    strong Content:
-    == markdown @article.content
+div.ui.attached.segment
+  h2
+    strong == @article.title
+  - @article.tags.each do |tag|
+    a.ui.tag.label[href="#{tag_path(tag)}"] == tag.name
+  hr
+  p == markdown @article.content
 
-  == link_to 'Back', articles_path
-  == link_to 'Edit', edit_article_path(@article)
-  == link_to 'Destroy', article_path(@article),
-                        method: :delete,
-                        data: { confirm: "Are you sure?" }
-  br
   div[class="ds-thread" data-thread-key="#{@article.id}" data-title="#{@article.title}" data-url="pleace replaced with article url"]

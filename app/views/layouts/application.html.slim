@@ -9,42 +9,41 @@ html
   body
     p.notice = notice
     p.alert = alert
-
-    div[class="ui grid" style="width: 1024px;margin: 0 auto;"]
-      div[class="one column row"]
-        div[class="column"]
+    div.ui.grid[style="width: 1024px;margin: 0 auto;"]
+      div.one.column.row
+        div.column
           h1 logHorizon
           p wall2flower的生存报告 poi~
           -if current_user
             p 
               == link_to 'Log out', destroy_user_session_path, method: :delete
-          div[class="ui tabular menu"]
+          div.ui.tabular.menu
             a[href="#{root_path}" class="item #{'active' if params[:controller] == 'welcome' and params[:action] == 'index'}"] Index
             a[href="#{tags_path}" class="item #{'active' if params[:controller] == 'tags'}"] Tags
             a[href="#{archives_path}" class="item #{'active' if params[:controller] == 'archives'}"] Archives
-            a[href="#{about_path}" class="item #{'active' if params[:controller] == 'about'}"] About
+            a[href="#{about_path}" class="item #{'active' if params[:action] == 'about' && params[:controller] == 'welcome'}"] About
       
       div.row
-        div[class="twelve wide column typo"]
+        div.twelve.wide.column.typo
           == yield
-        div[class="four wide column"]
-          div[class="ui card"]
-            div[class="image dimmable"]
+        div.four.wide.column
+          div.ui.card
+            div.image.dimmable
               == image_tag "icon.JPG"
             div.content
               div.description Null
 
-          div[class="ui top attached header"] Tags
-          div[class="ui attached segment"]
+          div.ui.top.attached.header Tags
+          div.ui.attached.segment
             p
               - Tag.find_each do |tag|
-                a[href="#{tag_path(tag)}" class="ui tag label"] == tag.name
-          div[class="ui top attached header"] Archive
-          div[class="ui attached segment"]
+                a.ui.tag.label[href="#{tag_path(tag)}" style="margin-bottom: 4px;margin-right: 4px;"] == tag.name
+          div.ui.top.attached.header Archives
+          div.ui.attached.segment
             - Article.all.group_by { |a| a.created_at.beginning_of_year }.sort.reverse.each do |year, a_year|
               - a_year.group_by{ |a| a.created_at.beginning_of_month }.each do |month, a_month|
                 p
-                  a[href="/archives/#{year.year}/#{year.month}"] #{month.strftime("%G %B")}("#{a_month.count}")
+                  a[href="/archives/#{year.year}/#{year.month}"] #{month.strftime("%G %B")}(#{a_month.count})
 
   javascript:
     var duoshuoQuery = {short_name:"loghorizon"};
