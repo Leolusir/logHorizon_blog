@@ -56,8 +56,7 @@ feature 'articles' do
       fill_in 'Content', :with => 'Here is a content. : )'
     end
     click_button 'Create Article'
-    expect(page).to have_css('a.ui.tag.label')
-    expect(page).to have_content('test')
+    expect(page).to have_selector('a.ui.tag.label', :text => 'test')
   end
 
 end
