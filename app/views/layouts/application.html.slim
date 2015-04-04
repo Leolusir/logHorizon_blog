@@ -19,7 +19,6 @@ html
               == link_to 'Log out', destroy_user_session_path, method: :delete
           div.ui.tabular.menu
             a[href="#{root_path}" class="item #{'active' if params[:controller] == 'welcome' and params[:action] == 'index'}"] Index
-            a[href="#{tags_path}" class="item #{'active' if params[:controller] == 'tags'}"] Tags
             a[href="#{archives_path}" class="item #{'active' if params[:controller] == 'archives'}"] Archives
             a[href="#{about_path}" class="item #{'active' if params[:action] == 'about' && params[:controller] == 'welcome'}"] About
       
@@ -37,7 +36,7 @@ html
           div.ui.attached.segment
             p
               - Tag.find_each do |tag|
-                a.ui.tag.label.small[href="#{tag_path(tag)}" style="margin-bottom: 4px;margin-right: 4px;"] == tag.name
+                a.ui.tag.label.small[href="#{tag_path(tag)}" style="margin-bottom: 4px;margin-right: 4px;"] #{tag.name}(#{tag.articles.count})
           div.ui.top.attached.header Archives
           div.ui.attached.segment
             - Article.all.group_by { |a| a.created_at.beginning_of_year }.sort.reverse.each do |year, a_year|

@@ -1,7 +1,6 @@
 div.ui.attached.segment
-  h4 == @tag.name
+  h4.ui.label == @tag.name
   ul
     - @tag.articles.each do |article|
       li
-        p
-          == link_to article.title, article_path(article)
+        == link_to article.title, article_path(article)
