@@ -2,7 +2,7 @@ div.ui.attached.segment
   h2
     strong == @article.title
   - @article.tags.each do |tag|
-    a.ui.tag.label[href="#{tag_path(tag)}"] == tag.name
+    a.ui.tag.label.tiny[href="#{tag_path(tag)}"] == tag.name
   hr
   p == markdown @article.content
 

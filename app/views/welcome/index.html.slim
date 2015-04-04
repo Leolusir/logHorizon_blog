@@ -4,11 +4,11 @@ div.ui.attached.segment
       == link_to article.title, article_path(article)
     div.sub.header
       == article.created_at.strftime("%Y %m月%d日, %A")
+    p 
+      - article.tags.each do |tag|
+        a.ui.tag.label.tiny[href="#{tag_path(tag)}"] == tag.name
     div.content
       == article.content
-    p
-      - article.tags.each do |tag|
-        a.ui.tag.label[href="#{tag_path(tag)}"] == tag.name
 div.ui.bottom.attached.header
   div[class="ui buttons"]
     - (0..(Article.all.count/5)).each do |i|

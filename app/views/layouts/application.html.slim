@@ -37,7 +37,7 @@ html
           div.ui.attached.segment
             p
               - Tag.find_each do |tag|
-                a.ui.tag.label[href="#{tag_path(tag)}" style="margin-bottom: 4px;margin-right: 4px;"] == tag.name
+                a.ui.tag.label.small[href="#{tag_path(tag)}" style="margin-bottom: 4px;margin-right: 4px;"] == tag.name
           div.ui.top.attached.header Archives
           div.ui.attached.segment
             - Article.all.group_by { |a| a.created_at.beginning_of_year }.sort.reverse.each do |year, a_year|
