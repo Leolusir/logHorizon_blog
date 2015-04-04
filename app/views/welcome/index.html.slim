@@ -11,6 +11,5 @@ div[class="ui attached segment"]
         a[href="#{tag_path(tag)}" class="ui tag label"] == tag.name
 div[class="ui bottom attached header"]
   div[class="ui buttons"]
-    div[class="ui button"] 1
-    div[class="ui button"] 2
-    div[class="ui button"] 3
+    - (0..(Article.all.count/5)).each do |i|
+      a.ui.button[href="#{root_path(page: i)}"] == i
