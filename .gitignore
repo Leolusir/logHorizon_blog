@@ -1,6 +1,7 @@
 /log
 /spce/tmp
 
+config/database.yml
 config/secrets.yml
 config/initializers/secret_token.rb
 
