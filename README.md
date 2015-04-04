@@ -17,6 +17,7 @@ rails s
 
 ###TODO:
 - [ ] archive by date
+- [ ] pagination
 - [ ] React.js/RactiveJS
 - [ ] sqlite3 -> PostgreSQL
 
