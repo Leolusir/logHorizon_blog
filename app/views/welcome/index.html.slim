@@ -12,4 +12,7 @@ div[class="ui attached segment"]
 div[class="ui bottom attached header"]
   div[class="ui buttons"]
     - (0..(Article.all.count/5)).each do |i|
-      a.ui.button[href="#{root_path(page: i)}"] == i
+      - if params[:page].to_i === i
+        a.ui.button.active[href="#{root_path(page: i)}"] == i
+      - else
+        a.ui.button[href="#{root_path(page: i)}"] == i
