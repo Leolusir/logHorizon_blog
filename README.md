@@ -26,10 +26,11 @@ rails s
 ```
 
 ###TODO:
-- [ ] archive by date
 - [ ] React.js/RactiveJS
+- [ ] 彩蛋: 深夜食堂
 
 ###DONE:
+- [x] archived by date
 - [x] sqlite -> postgresql
 - [x] admin scope
 - [x] pagination
