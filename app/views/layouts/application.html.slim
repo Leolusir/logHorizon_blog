@@ -42,7 +42,7 @@ html
             - Article.all.group_by { |a| a.created_at.beginning_of_year }.sort.reverse.each do |year, a_year|
               - a_year.group_by{ |a| a.created_at.beginning_of_month }.each do |month, a_month|
                 p
-                  a[href="/archives/#{year.year}/#{year.month}"] #{month.strftime("%G %B")}(#{a_month.count})
+                  a[href="/archives/#{month.year}/#{month.month}"] #{month.strftime("%G %B")}(#{a_month.count})
 
   javascript:
     var duoshuoQuery = {short_name:"loghorizon"};

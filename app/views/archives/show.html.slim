@@ -1,0 +1,20 @@
+div.ui.attached.segment
+  - if params[:month_id] && params[:year_id] && @result
+    - @result.each do |item|
+      ul
+        li
+          h2 #{params[:year_id]}/#{params[:month_id]}
+          ul
+            li
+              == link_to item.title, article_path(item)
+  - elsif params[:year_id] && @result 
+    - @result.group_by{|a| a.created_at.beginning_of_month}.each do |year, items|
+      ul
+        li
+          h2  #{params[:year_id]}/#{year.month}
+          ul
+            - items.each do |item| 
+              li
+                == link_to item.title, article_path(item)
+
+          
