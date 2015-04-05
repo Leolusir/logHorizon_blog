@@ -1,17 +1,19 @@
 LogHorizonBlog::Application.routes.draw do
-  devise_for :users
-  get "welcome/index"
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
+  
   root 'welcome#index'
   get '/about', to: 'welcome#about'
-  get '/archives/:year_id/:month_id', to: 'archives#index'
-  get '/archives/:year_id', to: 'archives#index'
-  get '/archives', to: 'archives#index'
+  get '/archives/:year_id/:month_id', to: 'archives#show'
+  get '/archives/:year_id', to: 'archives#show'
+
   resources :articles
   resources :tags
+  resources :archives, only: [:index, :show]
+
+  scope 'admin' do
+    devise_for :users
+    resources :articles
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
