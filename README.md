@@ -9,18 +9,25 @@ bundle exec rspec spec
 
 ## Install
 1.clone this repo
+
 ```
 git clone https://github.com/wall2flower/logHorizon_blog.git
 cd logHorizon
 ```
+
 2.copy database config file and modified with your own config
+
 ```
 cp config/database.example config/database.yml
 vi config/database.yml
 ```
+
 3.create database with PostgreSQL or MySQL
+
 4.`bundle install` to install requirement gem
+
 5.run server
+
 ```
 rails s
 ```
