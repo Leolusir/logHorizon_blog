@@ -19,6 +19,7 @@ end
 gem 'redcarpet'
 gem 'slim'
 gem 'devise'
+gem 'figaro'
 
 group :development do
   gem "rails-erd"
