@@ -5,7 +5,7 @@ LogHorizonBlog::Application.routes.draw do
   get '/archives/:year_id/:month_id', to: 'archives#show'
   get '/archives/:year_id', to: 'archives#show'
 
-  resources :articles
+  resources :articles, only: [:indes, :show]
   resources :tags
   resources :archives, only: [:index, :show]
 
