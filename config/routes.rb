@@ -5,13 +5,16 @@ LogHorizonBlog::Application.routes.draw do
   get '/archives/:year_id/:month_id', to: 'archives#show'
   get '/archives/:year_id', to: 'archives#show'
 
-  resources :articles, only: [:indes, :show]
+  resources :articles, only: [:index, :show]
   resources :tags
-  resources :archives, only: [:index, :show]
+  resources :archives
+
+  namespace :admin do
+    resources :articles
+  end
 
   scope 'admin' do
     devise_for :users
-    resources :articles
   end
 
   # Example of regular route:

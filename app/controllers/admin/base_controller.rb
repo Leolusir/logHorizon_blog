@@ -1,5 +1,6 @@
 module Admin
   class BaseController < ApplicationController
+    layout 'admin_layout'
     before_filter :verify_admin
 
     private

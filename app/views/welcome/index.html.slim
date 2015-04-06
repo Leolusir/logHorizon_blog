@@ -11,8 +11,20 @@ div.ui.attached.segment
       == article.content
 div.ui.bottom.attached.header
   div[class="ui buttons"]
-    - (0..(Article.all.count/5)).each do |i|
+    - article_count = Article.all.count
+    - if article_count%5 != 0
+      - page_array = (0..(article_count/5)).to_a
+    - else
+      - page_array = (0..((article_count/5)-1)).to_a
+
+    - page_array.each do |i|
       - if params[:page].to_i === i
         a.ui.button.active[href="#{root_path(page: i)}"] == i
       - else
         a.ui.button[href="#{root_path(page: i)}"] == i
+
+    /* - (0..(Article.all.count/5)-1).each do |i| */
+    /*   - if params[:page].to_i === i */
+    /*     a.ui.button.active[href="#{root_path(page: i)}"] == i */
+    /*   - else */
+    /*     a.ui.button[href="#{root_path(page: i)}"] == i */
