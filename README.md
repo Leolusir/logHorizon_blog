@@ -33,6 +33,8 @@ rails s
 ```
 
 ###TODO:
+- [ ] Namespace(admin)
+- [ ] admin layouts
 - [ ] React.js/RactiveJS
 - [ ] 彩蛋: 深夜食堂
 
