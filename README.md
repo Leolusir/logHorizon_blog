@@ -1,6 +1,6 @@
 # logHorizon_blog
 
-Powered by [Rails](https://github.com/rails/rails) and [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI), build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
+Powered by [Rails](https://github.com/rails/rails), [Slim](http://slim-lang.com) and [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI), build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
 
 ## Testing
 ```
@@ -33,20 +33,8 @@ rails s
 ```
 
 ###TODO:
-- [ ] Namespace(admin)
-- [ ] admin layouts
 - [ ] React.js/RactiveJS
 - [ ] 彩蛋: 深夜食堂
-
-###DONE:
-- [x] archived by date
-- [x] sqlite -> postgresql
-- [x] admin scope
-- [x] pagination
-- [x] post/edit/delete blogs
-- [x] post blog with tags
-- [x] markdown syntax
-- [x] rewrite template with [Slim](http://slim-lang.com/)
 
 ## Thanks
 - [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI)
