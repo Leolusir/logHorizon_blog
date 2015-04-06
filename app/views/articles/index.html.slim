@@ -1,6 +1,11 @@
 div.ui.attached.segment
-  ul
-    - @articles.each do |article|
-      li
-        span == article.title
-        span == article.content
+  - @articles.each do |article|
+    h2.ui.header
+      == link_to article.title, article_path(article)
+    div.sub.header
+      == article.created_at.strftime("%Y %m %d, %A")
+    p
+      - article.tags.each do |tag|
+        a.ui.tag.label.tiny[href="#{tag_path(tag)}"] == tag.name
+    div.content
+      == article.content
