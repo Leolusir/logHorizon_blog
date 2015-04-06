@@ -12,8 +12,8 @@ html
     div.ui.grid[style="width: 1024px;margin: 0 auto;"]
       div.one.column.row
         div.column
-          h1 logHorizon
-          p wall2flower的生存报告 poi~
+          h1 == ENV['title']
+          p == ENV['subtitle']
           -if current_user
             p 
               == link_to 'Log out', destroy_user_session_path, method: :delete
@@ -30,7 +30,7 @@ html
             div.image.dimmable
               == image_tag ENV['avater_url']
             div.content
-              div.description Null
+              div.description == ENV['personal_desc']
 
           div.ui.top.attached.header Tags
           div.ui.attached.segment
