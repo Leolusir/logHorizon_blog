@@ -8,16 +8,19 @@
         - @article.errors.full_messages.each do |msg|
           li 
             == msg
-  p
+  div.ui.input
     == f.label :title
     == f.text_field :title
-  p
+  br
+  div.ui.input
     == label_tag 'tags'
     == text_field_tag 'tags'
-  p
+  br
+  div.ui.reply.form
     == f.label :content
     == f.text_area :content
-  p
+  br
+  div.ui.input
     == f.submit
 
   hr

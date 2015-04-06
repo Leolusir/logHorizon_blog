@@ -1,6 +1,2 @@
 div.ui.attached.segment
-  ul
-    - @articles.each do |article|
-      li
-        span == article.title
-        span == article.content
+  == render 'form'

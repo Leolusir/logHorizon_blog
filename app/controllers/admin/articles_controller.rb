@@ -7,6 +7,9 @@ module Admin
       @tag = Tag.all
     end
 
+    def index
+      @articles = Article.all
+    end
     def create
       @article = Article.new(article_params)
       if @article.save
