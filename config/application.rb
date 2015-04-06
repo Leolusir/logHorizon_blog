@@ -8,6 +8,12 @@ Bundler.require(:default, Rails.env)
 
 module LogHorizonBlog
   class Application < Rails::Application
+    config.to_prepare do
+      Devise::SessionsController.layout "admin_layout"
+      Devise::ConfirmationsController.layout "admin_layout"
+      Devise::UnlocksController.layout "admin_layout"            
+      Devise::PasswordsController.layout "admin_layout"
+    end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
