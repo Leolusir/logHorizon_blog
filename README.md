@@ -57,6 +57,7 @@ avater_url: # avater url
 
 when you hava installed application successfully, visit `/admin/users/sign_in` to login, and then you can post/edit articles.
 
+![](/doc/img/example-01.png)
 
 ###TODO:
 - [ ] React.js/RactiveJS
