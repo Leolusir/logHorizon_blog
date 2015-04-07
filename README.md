@@ -2,7 +2,12 @@
 
 Powered by [Rails](https://github.com/rails/rails), [Slim](http://slim-lang.com) and [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI), build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
 
+## Demo
+My Blog: [wall2flower的生存报告](http://blog.wall2flower.me)
+
 ## Testing
+before this command, make sure you have already installed capybara and [capybara-webkit](https://github.com/thoughtbot/capybara-webkit).
+btw, capybara-webkit need QT dependency, you can find [here](https://github.com/thoughtbot/capybara-webkit#qt-dependency-and-installation-issues) to look some tips.
 ```
 bundle exec rspec spec
 ```
@@ -27,7 +32,7 @@ vi config/database.yml
 4.run migration
 
 ```
-bundle exec rake db:create db:migrate```
+bundle exec rake db:create db:migrate
 ```
 
 5.create admin account
