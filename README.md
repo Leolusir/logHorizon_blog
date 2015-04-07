@@ -46,6 +46,10 @@ rake init:generate_admin
 rails s
 ```
 
+### Usage
+when you hava installed application successfully, visit `/admin/users/sign_in` to login, and then you can post/edit articles.
+
+
 ###TODO:
 - [ ] React.js/RactiveJS
 - [ ] 彩蛋: 深夜食堂
