@@ -7,7 +7,7 @@ My Blog: [wall2flower的生存报告](http://blog.wall2flower.me)
 
 ## Testing
 before this command, make sure you have already installed capybara and [capybara-webkit](https://github.com/thoughtbot/capybara-webkit).
-btw, capybara-webkit need QT dependency, you can find [here](https://github.com/thoughtbot/capybara-webkit#qt-dependency-and-installation-issues) to look some tips.
+btw, capybara-webkit need QT dependency, you can click [here](https://github.com/thoughtbot/capybara-webkit#qt-dependency-and-installation-issues) to find some tips.
 ```
 bundle exec rspec spec
 ```
