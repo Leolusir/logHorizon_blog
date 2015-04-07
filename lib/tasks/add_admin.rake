@@ -1,6 +1,6 @@
-namespace :users do
+namespace :init do
   desc "set admin account"
-  task new_admin: :environment do
+  task generate_admin: :environment do
     User.create(email:'admin@example.com', password: 'password')
   end
 end

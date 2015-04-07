@@ -22,11 +22,20 @@ cp config/database.example config/database.yml
 vi config/database.yml
 ```
 
-3.create database with PostgreSQL or MySQL
+3.`bundle install` to install requirement gem
 
-4.`bundle install` to install requirement gem
+4.run migration
 
-5.run server
+```
+bundle exec rake db:create db:migrate```
+```
+
+5.create admin account
+```
+rake init:generate_admin
+```
+
+6.run server
 
 ```
 rails s
