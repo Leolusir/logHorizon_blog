@@ -47,7 +47,7 @@ rails s
 ```
 
 ### Usage
-you can edit `config/application.yml`, to set blog title, user avater etc.
+you can `cp config/application.example config/application.yml` and edit `config/application.yml`, to set blog title, user avater etc.
 ```
 title: # here is blog title
 subtitle: # subtitle
