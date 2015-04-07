@@ -47,6 +47,14 @@ rails s
 ```
 
 ### Usage
+you can edit `config/application.yml`, to set blog title, user avater etc.
+```
+title: # here is blog title
+subtitle: # subtitle
+personal_desc: # personal description
+avater_url: # avater url
+```
+
 when you hava installed application successfully, visit `/admin/users/sign_in` to login, and then you can post/edit articles.
 
 
