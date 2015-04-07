@@ -12,7 +12,7 @@ btw, capybara-webkit need QT dependency, you can find [here](https://github.com/
 bundle exec rspec spec
 ```
 
-## Install
+## Installation
 1.clone this repo
 
 ```
