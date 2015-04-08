@@ -8,6 +8,7 @@ LogHorizonBlog::Application.routes.draw do
   resources :articles, only: [:index, :show]
   resources :tags
   resources :archives
+  resources :admin, only: :index
 
   namespace :admin do
     resources :articles
