@@ -14,9 +14,6 @@ html
         div.column
           h1 == ENV['title']
           p == ENV['subtitle']
-          -if current_user
-            p 
-              == link_to 'Log out', destroy_user_session_path, method: :delete
           div.ui.tabular.menu
             a[href="#{root_path}" class="item #{'active' if params[:controller] == 'welcome' and params[:action] == 'index'}"] Index
             a[href="#{archives_path}" class="item #{'active' if params[:controller] == 'archives'}"] Archives
