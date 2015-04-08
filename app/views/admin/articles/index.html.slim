@@ -5,6 +5,7 @@ table.ui.table
     tr
       th Title
       th Tags
+      th Counts
       th Created_at
       th Operation
   tbody
@@ -14,6 +15,7 @@ table.ui.table
         td
           - article.tags.each do |tag|
             a.ui.tag.label.tiny[href="#{tag_path(tag)}"] == tag.name
+        td == article.count
         td == article.created_at
         td 
           == link_to 'Edit', edit_admin_article_path(article)
