@@ -1,6 +1,6 @@
 # logHorizon_blog
 
-Powered by [Rails](https://github.com/rails/rails), [Slim](http://slim-lang.com) and [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI), build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
+Powered by Rails, Slim and Semantic-UI, build with love. Follows [Semantic Version 2.0.0](http://semver.org/). Inspired by [LogHorizon](http://www3.nhk.or.jp/anime/loghorizon/)
 
 [logHorizon 这个项目是什么?](https://github.com/wall2flower/logHorizon_blog/wiki)
 
