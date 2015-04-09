@@ -4,6 +4,8 @@ Powered by [Rails](https://github.com/rails/rails), [Slim](http://slim-lang.com)
 
 [logHorizon 这个项目是什么?](https://github.com/wall2flower/logHorizon_blog/wiki)
 
+development follow [开发规范&workflow](https://github.com/wall2flower/workflow/blob/master/development.md)
+
 ## Demo
 My Blog: [wall2flower的生存报告](http://blog.wall2flower.me)
 
