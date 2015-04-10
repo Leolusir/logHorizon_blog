@@ -65,6 +65,8 @@ when you hava installed application successfully, visit `/admin` to login, and t
 
 <img src="/doc/img/example-01.png" />
 
+when you write blog, you can use markdown syntax : )
+
 ###TODO:
 - [ ] [feature] ReactJs
 - [ ] [feature] 彩蛋: 深夜食堂
