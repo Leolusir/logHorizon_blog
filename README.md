@@ -44,7 +44,7 @@ bundle exec rake db:create db:migrate
 rake init:generate_admin
 ```
 
-<img src="/doc/img/example-02.png" />
+<img src="/doc/img/example-03.gif" />
 
 6.run server
 
