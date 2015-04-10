@@ -71,6 +71,7 @@ when you hava installed application successfully, visit `/admin` to login, and t
 - [ ] [refactor] remove `devise` gem
 - [ ] [chore] frontend & design
 - [ ] [deploy] automatic deploy with webhook
+- [ ] [feature] HTML Accessibility
 
 ## Thanks
 - [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI)
