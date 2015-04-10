@@ -61,13 +61,16 @@ personal_desc: # personal description
 avater_url: # avater url
 ```
 
-when you hava installed application successfully, visit `/admin/users/sign_in` to login, and then you can post/edit articles.
+when you hava installed application successfully, visit `/admin` to login, and then you can post/edit articles.
 
 <img src="/doc/img/example-01.png" />
 
 ###TODO:
-- [ ] React.js/RactiveJS
-- [ ] 彩蛋: 深夜食堂
+- [ ] [feature] ReactJs
+- [ ] [feature] 彩蛋: 深夜食堂
+- [ ] [refactor] remove `devise` gem
+- [ ] [chore] frontend & design
+- [ ] [deploy] automatic deploy with webhook
 
 ## Thanks
 - [Semantic-UI](https://github.com/Semantic-Org/Semantic-UI)
