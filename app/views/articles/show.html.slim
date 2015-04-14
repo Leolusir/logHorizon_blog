@@ -5,5 +5,4 @@ div.ui.attached.segment
     a.ui.tag.label.tiny[href="#{tag_path(tag)}"] == tag.name
   hr
   p == markdown @article.content
-
-  div[class="ds-thread" data-thread-key="#{@article.id}" data-title="#{@article.title}" data-url="pleace replaced with article url"]
+  div[class="ds-thread" data-thread-key="#{@article.id}" data-title="#{@article.title}" data-url="#{request.original_url}"]
