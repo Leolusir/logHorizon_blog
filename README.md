@@ -68,7 +68,8 @@ when you hava installed application successfully, visit `/admin` to login, and t
 when you write blog, you can use markdown syntax : )
 
 ###TODO:
-- [ ] [feature] ReactJs
+- [ ] [feature] friendly URLs(eg:`/articles/hello-world`, not `/articles/1`)
+- [ ] [feature] React.js
 - [ ] [feature] 彩蛋: 深夜食堂
 - [ ] [refactor] remove `devise` gem
 - [ ] [chore] frontend & design
