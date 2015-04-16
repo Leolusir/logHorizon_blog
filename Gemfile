@@ -20,6 +20,7 @@ gem 'redcarpet'
 gem 'slim'
 gem 'devise'
 gem 'figaro'
+gem 'friendly_id', '~> 5.1.0'
 
 group :development do
   gem "rails-erd"
