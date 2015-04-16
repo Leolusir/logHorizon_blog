@@ -22,6 +22,7 @@ gem 'slim'
 gem 'devise'
 gem 'figaro'
 gem 'capistrano', '~> 3.4.0'
+gem 'friendly_id', '~> 5.1.0'
 
 group :development do
   gem "rails-erd"
