@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     user = build(:user)
     expect(user).to be_valid
   end
-  
+
   it "is invalid with a nil email" do
     user = build(:user, email: nil)
     user.valid?
