@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+# source 'https://ruby.taobao.org'
 
 ruby '2.0.0'
 gem 'rails', '4.0.0'
@@ -21,6 +22,7 @@ gem 'slim'
 gem 'devise'
 gem 'figaro'
 gem 'friendly_id', '~> 5.1.0'
+gem 'capistrano', '~> 3.4.0'
 
 group :development do
   gem "rails-erd"
