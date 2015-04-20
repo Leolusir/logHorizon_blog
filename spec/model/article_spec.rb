@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Article, :type => :model do
+RSpec.describe Article, type: :model do
   it "is valid with a title, content" do
     article = build(:article)
     expect(article).to be_valid

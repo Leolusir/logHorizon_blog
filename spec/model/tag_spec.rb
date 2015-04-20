@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Tag, :type => :model do
+RSpec.describe Tag, type: :model do
   it "is valid with a valid name" do
     tag = build(:tag)
     expect(tag).to be_valid
@@ -13,7 +13,7 @@ RSpec.describe Tag, :type => :model do
   end
 
   it "is invalid with a short name" do
-    tag = build(:tag, name: 'name')
+    tag = build(:tag, name: "name")
     tag.valid?
     expect(tag.errors[:name]).to include("is too short (minimum is 5 characters)")
   end
