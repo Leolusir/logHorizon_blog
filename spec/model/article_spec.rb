@@ -15,7 +15,8 @@ RSpec.describe Article, type: :model do
   it "is invalid with a short title" do
     article = build(:article, title: "hell")
     article.valid?
-    expect(article.errors[:title]).to include("is too short (minimum is 5 characters)")
+    expect(article.errors[:title]).to include("is too short (minimum is 5"\
+                                              " characters)")
   end
 
   it "is invalid with a nil content" do

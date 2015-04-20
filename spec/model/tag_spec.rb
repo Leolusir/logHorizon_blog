@@ -15,6 +15,7 @@ RSpec.describe Tag, type: :model do
   it "is invalid with a short name" do
     tag = build(:tag, name: "name")
     tag.valid?
-    expect(tag.errors[:name]).to include("is too short (minimum is 5 characters)")
+    expect(tag.errors[:name]).to include("is too short (minimum is 5"\
+                                         " characters)")
   end
 end

@@ -21,6 +21,7 @@ RSpec.describe User, type: :model do
   it "is invalid with a short password" do
     user = build(:user, password: "passwo")
     user.valid?
-    expect(user.errors[:password]).to include("is too short (minimum is 8 characters)")
+    expect(user.errors[:password]).to include("is too short (minimum is 8"\
+                                              " characters)")
   end
 end
