@@ -1,4 +1,4 @@
-FactoryGirl.define do 
+FactoryGirl.define do
   sequence :name do |n|
     "name no.#{n}"
   end
