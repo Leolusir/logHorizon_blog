@@ -21,6 +21,7 @@ gem 'redcarpet'
 gem 'slim'
 gem 'devise'
 gem 'figaro'
+gem 'friendly_id', '~> 5.1.0'
 gem 'capistrano', '~> 3.4.0'
 gem 'friendly_id', '~> 5.1.0'
 
